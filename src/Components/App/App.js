@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
 import TopNav from '../TopNav/TopNav'
+import LandingPage from '../LandingPage/LandingPage';
+import LoginPage from '../LoginPage/LoginPage';
+import MyPortfolio from '../MyPortfolio/MyPortfolio';
+import OtherPortfolio from '../OtherPortfolio/OtherPortfolio';
+import RegistrationPage from '../RegistrationPage/RegistrationPage';
 import './App.css';
 
 class App extends Component {
