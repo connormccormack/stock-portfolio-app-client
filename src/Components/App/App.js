@@ -6,6 +6,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import MyPortfolio from '../MyPortfolio/MyPortfolio';
 import OtherPortfolio from '../OtherPortfolio/OtherPortfolio';
 import RegistrationPage from '../RegistrationPage/RegistrationPage';
+import AddItem from '../AddItem/AddItem';
 import './App.css';
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
             <Route path={"/register"} component={RegistrationPage} />
             <Route path={"/my-portfolio"} component={MyPortfolio} />
             <Route path={"/other-portfolio"} component={OtherPortfolio} />
+            <Route path={"/add-item"} component={AddItem} />
           {/*<Route component={NotFoundPage} /> */}
           </Switch>
         </main>

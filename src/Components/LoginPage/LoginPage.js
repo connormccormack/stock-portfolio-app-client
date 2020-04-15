@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 // import TopNav from '../TopNav/TopNav'
 
-export default class LandingPage extends Component {
+export default class LoginPage extends Component {
   render() {
     return (
       <div>
         <form className="LoginForm" >
           <div className="username">
-            <label htmlFor="LoginForm__user_name">
+            <label htmlFor="LoginForm__username">
               Username
             </label>
             <input
@@ -29,7 +29,7 @@ export default class LandingPage extends Component {
               id="LoginForm__password"
             ></input>
           </div>
-          <button type="submit">Login</button>
+          <button type="submit"><Link to={"/my-portfolio"} className="to-my-portfolio">Login</Link></button>
         </form>
       </div>
     );

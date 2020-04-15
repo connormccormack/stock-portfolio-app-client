@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 // import { Button, Input, Required } from "../Utils/Utils";
 
 export default class RegistrationPage extends Component {
@@ -29,7 +30,7 @@ export default class RegistrationPage extends Component {
             id="RegistrationForm__password"
           ></input>
         </div>
-        <button type="submit">Register</button>
+        <button type="submit"><Link to={"/my-portfolio"} className="to-my-portfolio">Register</Link></button>
       </form>
     );
   }
