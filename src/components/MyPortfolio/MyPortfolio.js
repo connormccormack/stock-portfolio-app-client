@@ -1,10 +1,13 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 export default class MyPortfolio extends Component {
 
   // Include a div that suggests how to get started IF there are no items in the list
   render() {
+    // if (check if JWT exists) - this should be a function on its own from auth service
+    //  
+
     return (
       <div>
         <h2>My Portfolio</h2>
@@ -18,4 +21,5 @@ export default class MyPortfolio extends Component {
       </div>
     );
   }
+  // else {return  <Redirect to="/login" />}
 }

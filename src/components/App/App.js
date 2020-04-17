@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
+import PrivateRoute from '../Utils/PrivateRoute'
+import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
 import TopNav from '../TopNav/TopNav'
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -7,6 +9,7 @@ import MyPortfolio from '../MyPortfolio/MyPortfolio';
 import OtherPortfolio from '../OtherPortfolio/OtherPortfolio';
 import RegistrationPage from '../RegistrationPage/RegistrationPage';
 import AddItem from '../AddItem/AddItem';
+import NotFoundPage from '../NotFoundPage/NoteFoundPage';
 import './App.css';
 
 class App extends Component {
@@ -29,12 +32,13 @@ class App extends Component {
           )}
           <Switch>
             <Route exact path={"/"} component={LandingPage} />
-            <Route path={"/login"} component={LoginPage} />
-            <Route path={"/register"} component={RegistrationPage} />
-            <Route path={"/my-portfolio"} component={MyPortfolio} />
-            <Route path={"/other-portfolio"} component={OtherPortfolio} />
-            <Route path={"/add-item"} component={AddItem} />
-          {/*<Route component={NotFoundPage} /> */}
+            <PublicOnlyRoute path={"/login"} component={LoginPage} />
+            <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
+            <PrivateRoute path={"/my-portfolio"} component={MyPortfolio} />
+            <Route path={"/other-portfolio/:portfolio_id"} component={OtherPortfolio} />
+            {/*convert portfolio_id to number on client side */}
+            <PrivateRoute path={"/add-item"} component={AddItem} />
+            <Route component={NotFoundPage} />
           </Switch>
         </main>
       </div>
