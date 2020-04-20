@@ -5,11 +5,12 @@ import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
 import TopNav from '../TopNav/TopNav'
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
-import MyPortfolio from '../MyPortfolio/MyPortfolio';
-import OtherPortfolio from '../OtherPortfolio/OtherPortfolio';
+import Portfolios from '../Portfolios/Portfolios';
 import RegistrationPage from '../RegistrationPage/RegistrationPage';
 import AddItem from '../AddItem/AddItem';
 import NotFoundPage from '../NotFoundPage/NoteFoundPage';
+import TokenService from '../../services/TokenService';
+import AuthApiService from '../../services/AuthApiService';
 import './App.css';
 
 class App extends Component {
@@ -34,8 +35,8 @@ class App extends Component {
             <Route exact path={"/"} component={LandingPage} />
             <PublicOnlyRoute path={"/login"} component={LoginPage} />
             <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
-            <PrivateRoute path={"/my-portfolio"} component={MyPortfolio} />
-            <Route path={"/other-portfolio/:portfolio_id"} component={OtherPortfolio} />
+            <PrivateRoute path={"/my-portfolio"} component={Portfolios} />
+            <Route path={"/other-portfolio/:portfolio_id"} component={Portfolios} />
             {/*convert portfolio_id to number on client side */}
             <PrivateRoute path={"/add-item"} component={AddItem} />
             <Route component={NotFoundPage} />

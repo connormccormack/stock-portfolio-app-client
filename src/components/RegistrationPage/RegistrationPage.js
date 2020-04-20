@@ -12,28 +12,24 @@ export default class RegistrationPage extends Component {
 
   state = { error: null }
 
-  handleRegistrationSuccess = user => {
+  onRegistrationSuccess = () => {
     const { history } = this.props
     history.push('/login')
   }
 
   handleSubmit = ev => {
     ev.preventDefault()
-    const { full_name, nick_name, user_name, password } = ev.target
+    const { user_name, password } = ev.target
 
     this.setState({ error: null })
     AuthApiService.postUser({
       user_name: user_name.value,
       password: password.value,
-      full_name: full_name.value,
-      nickname: nick_name.value,
     })
       .then(user => {
-        full_name.value = ''
-        nick_name.value = ''
         user_name.value = ''
         password.value = ''
-        this.props.onRegistrationSuccess()
+        this.onRegistrationSuccess()
       })
       .catch(res => {
         this.setState({ error: res.error })
@@ -46,7 +42,7 @@ export default class RegistrationPage extends Component {
       <form className="RegistrationForm" onSubmit={this.handleSubmit}>
         <div className="username">
           <label htmlFor="RegistrationForm__user_name">
-            Username
+            Username:
           </label>
           <input
             name="user_name"
@@ -57,7 +53,7 @@ export default class RegistrationPage extends Component {
         </div>
         <div className="password">
           <label htmlFor="RegistrationForm__password">
-            Password
+            Password:
           </label>
           <input
             name="password"
