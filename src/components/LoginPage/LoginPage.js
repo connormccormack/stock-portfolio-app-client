@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import AuthApiService from '../../services/AuthApiService';
+import TokenService from '../../services/TokenService';
 // import TopNav from '../TopNav/TopNav'
 
 export default class LoginPage extends Component {
@@ -31,8 +32,10 @@ export default class LoginPage extends Component {
 
   handleLoginSuccess = () => {
     const { location, history } = this.props
-    const destination = (location.state || {}).from || '/my-portfolio'
+    const { user_id } = TokenService.readJwtToken()
+    const destination = '/portfolios/' + user_id;
     history.push(destination)
+
   }
 
   render() {
@@ -61,7 +64,7 @@ export default class LoginPage extends Component {
               id="LoginForm__password"
             ></input>
           </div>
-          <button type="submit">{/*<Link to={"/my-portfolio"} className="to-my-portfolio">Login</Link>*/}Login</button>
+          <button type="submit">Login</button>
         </form>
       </div>
     );

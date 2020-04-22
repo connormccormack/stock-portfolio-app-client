@@ -25,7 +25,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App__header">
-          <TopNav />
+          <Route component={TopNav}>
+          </Route>  
         </header>
         <main className="App__main">
           {this.state.hasError && (
@@ -35,9 +36,7 @@ class App extends Component {
             <Route exact path={"/"} component={LandingPage} />
             <PublicOnlyRoute path={"/login"} component={LoginPage} />
             <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
-            <PrivateRoute path={"/my-portfolio"} component={Portfolios} />
-            <Route path={"/other-portfolio/:portfolio_id"} component={Portfolios} />
-            {/*convert portfolio_id to number on client side */}
+            <Route path={"/portfolios/:user_id"} component={Portfolios} />
             <PrivateRoute path={"/add-item"} component={AddItem} />
             <Route component={NotFoundPage} />
           </Switch>
