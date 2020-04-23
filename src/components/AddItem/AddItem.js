@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import TokenService from '../../services/TokenService';
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import PortfoliosService from '../../services/PortfoliosService';
 
 export default class AddItem extends Component {
@@ -12,16 +12,18 @@ export default class AddItem extends Component {
   
 
   handleSubmit = (ev) => {
+    ev.preventDefault();
     const { user_id } = TokenService.readJwtToken()
     const { assetName, assetClass } = ev.target;
     const payload = {
-      assetClass: assetClass.val(),
-      assetClass: assetClass.val()
+      user_id: user_id,
+      assetName: assetName.value,
+      assetClass: assetClass.value
     };
+    console.log('yolo')
     PortfoliosService.postAsset(payload)
     .then((res) => {
-      let history = useHistory();
-      history.push(`/portfolios/${user_id}`);
+      this.props.history.push(`/portfolios/${user_id}`);
     })
     .catch((res) => {
       this.setState({ error: res.error });
@@ -36,8 +38,8 @@ export default class AddItem extends Component {
     // for handleSubmit - send token and form data to the post route
 
     return (
-      <div className="add-item-form" >
-        <form onSubmit={this.handleSubmit}>
+      <div className="add-item-screen" >
+        <form onSubmit={this.handleSubmit} id="add-item-form">
           <div className="assetName">
             <label htmlFor="assetName">
               Asset Name
@@ -53,12 +55,16 @@ export default class AddItem extends Component {
             <label htmlFor="assetClass">
               Asset Class
             </label>
-            <input
-              name="assetClass"
-              type="text"
-              required
-              id="assetClass"
-            ></input>
+            <select id="assetClass" form="add-item-form" name="assetClass" required>
+              <option value="US Equity">US Equity</option>
+              <option value="International Equity">International Equity</option>
+              <option value="Cryptocurrency">Cryptocurrency</option>
+              <option value="Fiat Currency">Fiat Currency</option>
+              <option value="Bonds">Bonds</option>
+              <option value="Real Estate">Real Estate</option>
+              <option value="Alternative Investments">Alternative Investments</option>
+              <option value="Precious Metals & Commodities">Precious Metals & Commodities</option>
+            </select>
           </div>
           <button type="submit">Add New Asset</button>
         </form>
