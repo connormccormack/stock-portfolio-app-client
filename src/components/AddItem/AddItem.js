@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import TokenService from '../../services/TokenService';
 // import { useHistory } from "react-router-dom";
 import PortfoliosService from '../../services/PortfoliosService';
+import './AddItem.css';
 
 export default class AddItem extends Component {
   constructor(props) {

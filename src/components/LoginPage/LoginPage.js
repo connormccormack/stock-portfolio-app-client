@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AuthApiService from '../../services/AuthApiService';
 import TokenService from '../../services/TokenService';
 // import TopNav from '../TopNav/TopNav'
+import './LoginPage.css';
 
 export default class LoginPage extends Component {
   static defaultProps = {

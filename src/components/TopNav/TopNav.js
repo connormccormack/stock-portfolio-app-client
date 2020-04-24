@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import TokenService from '../../services/TokenService';
+import './TopNav.css';
 
 export default class TopNav extends Component {
 

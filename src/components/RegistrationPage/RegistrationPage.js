@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import AuthApiService from '../../services/AuthApiService';
 // import { Button, Input, Required } from "../Utils/Utils";
+import './RegistrationPage.css';
 
 export default class RegistrationPage extends Component {
   static defaultProps = {

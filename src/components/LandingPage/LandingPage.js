@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 // import TopNav from '../TopNav/TopNav'
+import './LandingPage.css';
 
 export default class LandingPage extends Component {
   render() {

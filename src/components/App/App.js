@@ -8,7 +8,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import Portfolios from '../Portfolios/Portfolios';
 import RegistrationPage from '../RegistrationPage/RegistrationPage';
 import AddItem from '../AddItem/AddItem';
-import NotFoundPage from '../NotFoundPage/NoteFoundPage';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import TokenService from '../../services/TokenService';
 import AuthApiService from '../../services/AuthApiService';
 import './App.css';
