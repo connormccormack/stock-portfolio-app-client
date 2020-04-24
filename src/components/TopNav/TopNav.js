@@ -17,7 +17,7 @@ export default class TopNav extends Component {
       <h3>Asset Trend</h3>
       <div>
       {TokenService.hasAuthToken() ? 
-        <button type="button" onClick={this.handleLogout}>
+        <button type="button" className="logout-button" onClick={this.handleLogout}>
           Logout
         </button> 
         : 

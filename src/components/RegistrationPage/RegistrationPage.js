@@ -63,7 +63,7 @@ export default class RegistrationPage extends Component {
             id="RegistrationForm__password"
           ></input>
         </div>
-        <button type="submit">{/*<Link to={"/my-portfolio"} className="to-my-portfolio">Register</Link>*/}Register</button>
+        <button type="submit" className="register-button">{/*<Link to={"/my-portfolio"} className="to-my-portfolio">Register</Link>*/}Register</button>
       </form>
     );
   }

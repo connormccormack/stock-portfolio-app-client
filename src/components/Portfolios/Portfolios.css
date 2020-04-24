@@ -1,0 +1,53 @@
+.asset-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.delete-button {
+  color: rgb(167, 10, 10);
+  border-radius: 3px;
+  border-color: rgb(167, 10, 10);
+  border-width: 2px;
+  border-style: solid;
+  background-color: white;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.link-to-add-item {
+  width: 175px;
+  color: white;
+  border-radius: 5px;
+  border-color: rgb(7, 88, 7);
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgb(7, 88, 7);
+  font-size: 20px;
+  margin-top: 5px;
+  padding: 5px 15px;
+  text-align: center;
+}
+
+.link-to-add-item:hover {
+  width: 175px;
+  color: rgb(7, 88, 7);
+  border-radius: 5px;
+  border-color: rgb(7, 88, 7);
+  border-style: solid;
+  border-width: 2px;
+  background-color: white;
+  font-size: 20px;
+  margin-top: 5px;
+  padding: 5px 15px;
+  text-align: center;
+}

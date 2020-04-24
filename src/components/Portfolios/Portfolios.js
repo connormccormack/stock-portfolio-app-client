@@ -55,12 +55,14 @@ export default class Portfolios extends Component {
     return (
       <div>
         {isCurrentUser ? <h2>My Portfolio</h2> : <h2> User{this.props.match.params.user_id}'s Portfolio</h2>}
-        <ul>
+        <ul className="asset-list">
           {assetList.map(asset =>
             <li className="portfolio-item">
               <span>{asset.asset_name}</span>
-              <span>{asset.asset_class}</span>
-              {isCurrentUser && <button type="button" onClick={() => this.handleDelete(asset.id)}>Delete</button>}
+              <span>
+                {asset.asset_class}
+                {isCurrentUser && <button type="button" className="delete-button" onClick={() => this.handleDelete(asset.id)}>Delete</button>}
+              </span>
             </li>
           )}
         </ul>

@@ -67,7 +67,7 @@ export default class AddItem extends Component {
               <option value="Precious Metals & Commodities">Precious Metals & Commodities</option>
             </select>
           </div>
-          <button type="submit">Add New Asset</button>
+          <button type="submit" className="add-item-button">Add New Asset</button>
         </form>
       </div>
     );

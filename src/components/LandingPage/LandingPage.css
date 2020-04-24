@@ -1,0 +1,21 @@
+.link-to-registration, .link-to-login {
+  color: #282c34;
+  border-radius: 5px;
+  border-color: #282c34;
+  border-width: 2px;
+  border-style: solid;
+  background-color: white;
+  font-size: 20px;
+  margin-top: 5px;
+  padding: 5px 15px;
+  margin-right: 10px;
+}
+
+h3 {
+  margin-bottom: 50px;
+}
+
+p {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}

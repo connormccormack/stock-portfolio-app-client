@@ -41,33 +41,35 @@ export default class LoginPage extends Component {
 
   render() {
     return (
-      <div>
-        <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
-          <div className="user_name">
-            <label htmlFor="LoginForm__username">
-              Username
-            </label>
-            <input
-              name="user_name"
-              type="text"
-              required
-              id="LoginForm__user_name"
-            ></input>
-          </div>
-          <div className="password">
-            <label htmlFor="LoginForm__password">
-              Password
-            </label>
-            <input
-              name="password"
-              type="password"
-              required
-              id="LoginForm__password"
-            ></input>
-          </div>
-          <button type="submit">Login</button>
-        </form>
-      </div>
+      <section className="login-screen">
+        <div className="login-form-container">
+          <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
+            <div className="user_name-container">
+              <label htmlFor="LoginForm__username">
+                Username
+              </label>
+              <input
+                name="user_name"
+                type="text"
+                required
+                id="LoginForm__user_name"
+              ></input>
+            </div>
+            <div className="password-container">
+              <label htmlFor="LoginForm__password">
+                Password
+              </label>
+              <input
+                name="password"
+                type="password"
+                required
+                id="LoginForm__password"
+              ></input>
+            </div>
+            <button type="submit" className="login-button">Login</button>
+          </form>
+        </div>
+      </section>
     );
   }
 }

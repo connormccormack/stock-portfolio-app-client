@@ -7,12 +7,21 @@ export default class LandingPage extends Component {
   render() {
     return (
       <section>
-        <h1>Welcome to Asset Trend</h1>
         <h3>
-          See what stocks and cryptocurrencies your friends are investing in, and create and share your own portfolio!
+          Create and share your own portfolio
+        </h3>
+        <h3>
+          See your friends' investments
+        </h3>
+        <h3>
+          Discover new cryptocurrencies, alternative investments, and more!
         </h3>
         <p>
-          Here are some exciting words and example portfolios
+          Try it out yourself, or login with Demo User. 
+          <br></br>
+          Login: Demo 
+          <br></br>
+          Password: ASDFasdf12!@
         </p>
         <Link to={`/register`} className="link-to-registration">
           Register Now
