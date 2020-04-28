@@ -49,7 +49,7 @@ export default class Portfolios extends Component {
     // console.log(this.props.match.params.user_id)
     // console.log(this.state.assetList)
     const { user_id } = TokenService.readJwtToken()
-    const isCurrentUser = (TokenService.hasAuthToken() && (this.props.match.params.user_id == user_id))
+    const isCurrentUser = (TokenService.hasAuthToken() && (Number(this.props.match.params.user_id) === user_id))
     const { assetList } = this.state
     // if logged in but viewing someone else's portfolio page, remove delete and add buttons
     return (
