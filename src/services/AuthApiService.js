@@ -7,6 +7,7 @@
 // function to read JWT from client's browser
 
 // function to destroy token (call it whenever we get a 401 response from protected endpoint.  Also, on logout)
+// local is working
 
 import config from '../config'
 import TokenService from './TokenService'
