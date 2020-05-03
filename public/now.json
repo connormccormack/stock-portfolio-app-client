@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "asset-trend-app",
-  "alias": "[connor-mccormack-asset-trend-app",
+  "alias": "connor-mccormack-asset-trend-app",
   "routes": [
       { "handle": "filesystem" },
       { "src": "/.*", "dest": "/index.html" }
