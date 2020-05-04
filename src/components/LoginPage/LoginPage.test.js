@@ -1,16 +1,17 @@
+
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import LoginPage from "./LoginPage";
 import { BrowserRouter } from "react-router-dom";
 
 it("renders without crashing", () => {
-  const div = document.createElement("div");
+  const section = document.createElement("section");
   ReactDOM.render(
     <BrowserRouter>
-      <App />
+      <LoginPage />
     </BrowserRouter>,
-    div
+    section
   );
 
-  ReactDOM.unmountComponentAtNode(div);
+  ReactDOM.unmountComponentAtNode(section);
 });

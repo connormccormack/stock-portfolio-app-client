@@ -1,16 +1,17 @@
+
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import RegistrationPage from "./RegistrationPage";
 import { BrowserRouter } from "react-router-dom";
 
 it("renders without crashing", () => {
-  const div = document.createElement("div");
+  const form = document.createElement("form");
   ReactDOM.render(
     <BrowserRouter>
-      <App />
+      <RegistrationPage />
     </BrowserRouter>,
-    div
+    form
   );
 
-  ReactDOM.unmountComponentAtNode(div);
+  ReactDOM.unmountComponentAtNode(form);
 });
