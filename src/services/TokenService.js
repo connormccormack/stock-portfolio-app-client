@@ -16,7 +16,11 @@ const TokenService = {
     return !!TokenService.getAuthToken()
   },
   parseJwt(jwt) {
-    return jwtDecode(jwt)
+    if (jwt) {
+      return jwtDecode(jwt) }
+    else {
+      return {}
+    }
   },
   readJwtToken() {
     return TokenService.parseJwt(TokenService.getAuthToken())
