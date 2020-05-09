@@ -16,8 +16,6 @@ export default class Portfolios extends Component {
     error: null,
     assetList: [] 
   };
-  // component did mount
-    // do fetch call, set state
 
   componentDidMount() {
     console.log('component mounted')
@@ -39,15 +37,9 @@ export default class Portfolios extends Component {
     })
     .catch((err) => {this.setState({ error: err })})
   }
-   // /portfolio/1234
-   // if (currentlyLoggedInUserId === portfolioUserId) {
-   // this.props.match.params.user_id
 
-  // Include a div that suggests how to get started IF there are no items in the list
   render() { 
-    console.log(TokenService.readJwtToken())
-    // console.log(this.props.match.params.user_id)
-    // console.log(this.state.assetList)
+    // console.log(TokenService.readJwtToken())
     const { user_id } = TokenService.readJwtToken()
     const isCurrentUser = (TokenService.hasAuthToken() && (Number(this.props.match.params.user_id) === user_id))
     const { assetList } = this.state

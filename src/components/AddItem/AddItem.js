@@ -33,10 +33,6 @@ export default class AddItem extends Component {
 
   render() {
     const { user_id } = TokenService.readJwtToken()
-    
-    // make onSubmit for form, and on submit push `/portfolio/${user_id}` to history
-
-    // for handleSubmit - send token and form data to the post route
 
     return (
       <div className="add-item-screen" >
@@ -74,4 +70,3 @@ export default class AddItem extends Component {
   }
 }
 
-// <Link to={`/portfolios/${user_id}`} className="link-to-my-portfolio">
