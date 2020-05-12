@@ -29,6 +29,7 @@
   margin-top: 5px;
   padding: 5px 15px;
   text-align: center;
+  -webkit-text-fill-color: #282c34;
 }
 
 #LoginForm__user_name, #LoginForm__password {

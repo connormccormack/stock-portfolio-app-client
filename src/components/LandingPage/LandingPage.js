@@ -10,16 +10,12 @@ export default class LandingPage extends Component {
         <h3>
           Create your own portfolio of cryptocurrencies, stocks, real estate, and more!
         </h3>
-        <h3>
-          Share your portfolio via shareable link
-        </h3>
-        <h5>
-          Only you can edit your portfolio
-        </h5>
-        <h5>
-          If your friends send you their portfolio links, you can see their asset selections
-        </h5>
-        <Link to={`/register`} className="link-to-registration">
+        <ul>
+          <li>Share your portfolio via shareable link</li>
+          <li>Only you can edit your own portfolio</li>
+          <li>If your friends send you their portfolio links, you can see their asset selections and discover new stocks and investments</li>
+        </ul>
+        <Link to={`/register`} className="link-to-registration-main">
           Register Now
         </Link>
         <p>
@@ -29,7 +25,7 @@ export default class LandingPage extends Component {
           <br></br>
           Password: ASDFasdf12!@
         </p>
-        <Link to={`/login`} className="link-to-login">
+        <Link to={`/login`} className="link-to-login-main">
           Login
         </Link>
       </section>
