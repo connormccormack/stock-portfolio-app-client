@@ -18,16 +18,18 @@ export default class Portfolios extends Component {
   };
 
   componentDidMount() {
-    console.log('component mounted')
     this.updateAssetList()
   }
 
   handleDelete(assetId) {
-    console.log('delete clicked')
-    PortfoliosService.deleteAsset(assetId)
+    // eslint-disable-next-line no-restricted-globals
+    const deleteConfirmed = confirm('Delete Asset?')
+    if (deleteConfirmed) {
+      PortfoliosService.deleteAsset(assetId)
       .then(() => 
         this.updateAssetList()
       )
+    }
   }
 
   updateAssetList() {
