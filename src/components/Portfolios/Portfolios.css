@@ -22,11 +22,17 @@
   background-color: white;
   font-size: 15px;
   margin-left: 5px;
+  -webkit-text-fill-color: rgb(167, 10, 10);
+}
+
+.delete-button:hover {
+  cursor: pointer;
+  border-color: #fff;
 }
 
 .link-to-add-item {
   width: 175px;
-  color: white;
+  color: #fff;
   border-radius: 5px;
   border-color: rgb(7, 88, 7);
   border-style: solid;
@@ -36,20 +42,23 @@
   margin-top: 5px;
   padding: 5px 15px;
   text-align: center;
+  -webkit-text-fill-color: #fff;
 }
 
 .link-to-add-item:hover {
+  cursor: pointer;
   width: 175px;
   color: rgb(7, 88, 7);
   border-radius: 5px;
   border-color: rgb(7, 88, 7);
   border-style: solid;
   border-width: 2px;
-  background-color: white;
+  background-color: #fff;
   font-size: 20px;
   margin-top: 5px;
   padding: 5px 15px;
   text-align: center;
+  -webkit-text-fill-color: rgb(7, 88, 7);
 }
 
 @media screen and (min-width: 1024px){

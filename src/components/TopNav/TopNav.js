@@ -14,7 +14,7 @@ export default class TopNav extends Component {
     console.log(this.props)
     return (
     <nav>
-      <h3>Asset Trend</h3>
+      <h3 className="navTitle">Asset Trend</h3>
       <div>
       {TokenService.hasAuthToken() ? 
         <button type="button" className="logout-button" onClick={this.handleLogout}>
