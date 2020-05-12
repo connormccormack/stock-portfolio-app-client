@@ -4,6 +4,11 @@
   align-items: flex-start;
 }
 
+.portfolio-container {
+  height: 100%;
+  padding-bottom: 15px;
+}
+
 .portfolio-item {
   display: flex;
   flex-direction: column;
@@ -14,12 +19,20 @@
   margin-bottom: 5px;
 }
 
+.portfolio-item:hover {
+  background-color: lightgrey;
+}
+
 .sub-item {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.asset-name {
+  font-weight: bold;
 }
 
 .delete-button {
@@ -31,6 +44,9 @@
   background-color: white;
   font-size: 15px;
   margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 7px;
+  margin-bottom: 0px;
   -webkit-text-fill-color: rgb(167, 10, 10);
 }
 
@@ -49,6 +65,7 @@
   background-color: rgb(7, 88, 7);
   font-size: 20px;
   margin-top: 5px;
+  margin-bottom: 10px !important;
   padding: 5px 15px;
   text-align: center;
   -webkit-text-fill-color: #fff;
@@ -70,14 +87,35 @@
   -webkit-text-fill-color: rgb(7, 88, 7);
 }
 
+.shareable {
+  cursor: pointer;
+  width: 175px;
+  color: rgb(7, 88, 7);
+  border-radius: 5px;
+  border-color: rgb(7, 88, 7);
+  border-style: solid;
+  border-width: 2px;
+  background-color: #fff;
+  font-size: 20px;
+  margin-top: 5px;
+  padding: 5px 15px;
+  text-align: center;
+  -webkit-text-fill-color: rgb(7, 88, 7);
+}
+
 @media screen and (min-width: 1024px){
   .portfolio-item {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    width: 50%;
+    align-items: flex-start;
+    width: 90%;
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+  
+  .portfolio-item:hover {
+    background-color: lightgrey;
   }
   .asset-list {
     display: flex;
@@ -85,4 +123,34 @@
     align-items: center;
   }
   
+  .delete-button {
+    color: rgb(167, 10, 10);
+    border-radius: 3px;
+    border-color: rgb(167, 10, 10);
+    border-width: 2px;
+    border-style: solid;
+    background-color: white;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    -webkit-text-fill-color: rgb(167, 10, 10);
+  }
+
+  .link-to-add-item {
+  width: 175px;
+  color: #fff;
+  border-radius: 5px;
+  border-color: rgb(7, 88, 7);
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgb(7, 88, 7);
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  -webkit-text-fill-color: #fff;
+  }
 }

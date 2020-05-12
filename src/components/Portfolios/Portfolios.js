@@ -40,19 +40,31 @@ export default class Portfolios extends Component {
     .catch((err) => {this.setState({ error: err })})
   }
 
+  handleShare() {
+    let shareUrl = window.location.href;
+    const el = document.createElement('textarea');
+    el.value = shareUrl;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  }
+
   render() { 
     // console.log(TokenService.readJwtToken())
     const { user_id } = TokenService.readJwtToken()
     const isCurrentUser = (TokenService.hasAuthToken() && (Number(this.props.match.params.user_id) === user_id))
     const { assetList } = this.state
+
     // if logged in but viewing someone else's portfolio page, remove delete and add buttons
     return (
-      <div>
+      <div className="portfolio-container">
         {isCurrentUser ? <h2>My Portfolio</h2> : <h2> User{this.props.match.params.user_id}'s Portfolio</h2>}
+        {isCurrentUser && <Link className="shareable" onClick={() => this.handleShare()}>Click Here to Copy Shareable URL!</Link>}
         <ul className="asset-list">
           {assetList.map(asset =>
             <li className="portfolio-item">
-              <span>{asset.asset_name}</span>
+              <span className="asset-name">{asset.asset_name}</span>
               <div className="sub-item">
                 <span>{asset.asset_class}</span>
                 <span>{isCurrentUser && <button type="button" className="delete-button" onClick={() => this.handleDelete(asset.id)}>Delete</button>}</span>
