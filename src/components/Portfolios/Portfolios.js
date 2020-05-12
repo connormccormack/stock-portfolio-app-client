@@ -53,10 +53,10 @@ export default class Portfolios extends Component {
           {assetList.map(asset =>
             <li className="portfolio-item">
               <span>{asset.asset_name}</span>
-              <span>
-                {asset.asset_class}
-                {isCurrentUser && <button type="button" className="delete-button" onClick={() => this.handleDelete(asset.id)}>Delete</button>}
-              </span>
+              <div className="sub-item">
+                <span>{asset.asset_class}</span>
+                <span>{isCurrentUser && <button type="button" className="delete-button" onClick={() => this.handleDelete(asset.id)}>Delete</button>}</span>
+              </div>
             </li>
           )}
         </ul>

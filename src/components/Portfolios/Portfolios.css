@@ -6,11 +6,20 @@
 
 .portfolio-item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   width: 90%;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.sub-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .delete-button {

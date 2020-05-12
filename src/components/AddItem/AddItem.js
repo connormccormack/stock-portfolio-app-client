@@ -64,6 +64,7 @@ export default class AddItem extends Component {
             </select>
           </div>
           <button type="submit" className="add-item-button">Add New Asset</button>
+          <Link to={`/portfolios/${user_id}`} className="cancel-button">Cancel</Link>
         </form>
       </div>
     );

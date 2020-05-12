@@ -27,8 +27,22 @@
   text-align: center;
 }
 
-.add-item-button {
+.add-item-button:hover {
   cursor: pointer;
+}
+
+.cancel-button {
+  width: 175px;
+  color: #282c34;
+  border-radius: 5px;
+  border-color: #282c34;
+  border-style: solid;
+  border-width: 2px;
+  background-color: white;
+  font-size: 20px;
+  margin-top: 5px;
+  padding: 5px 15px;
+  text-align: center;
 }
 
 #assetName, #assetClass {
