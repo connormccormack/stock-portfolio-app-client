@@ -20,7 +20,6 @@ export default class TopNav extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
     <nav>
       <h3 className="navTitle" onClick={() => this.handleTitleClick()}>Asset Trend</h3>
