@@ -60,7 +60,7 @@ export default class Portfolios extends Component {
     return (
       <div className="portfolio-container">
         {isCurrentUser ? <h2>My Portfolio</h2> : <h2> User{this.props.match.params.user_id}'s Portfolio</h2>}
-        {isCurrentUser && <Link className="shareable" onClick={() => this.handleShare()}>Click Here to Copy Shareable URL!</Link>}
+        {isCurrentUser && <button type="button" className="shareable" onClick={() => this.handleShare()}>Click Here to Copy Shareable URL!</button>}
         <ul className="asset-list">
           {assetList.map(asset =>
             <li className="portfolio-item">

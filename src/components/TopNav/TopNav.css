@@ -39,6 +39,7 @@ button:hover, a:hover {
 
 .navTitle {
   color: #fff;
+  cursor: pointer;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {

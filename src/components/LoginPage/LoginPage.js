@@ -42,6 +42,13 @@ export default class LoginPage extends Component {
   render() {
     return (
       <section className="login-screen">
+        <p>
+          Try it out with the Demo User: 
+          <br></br>
+          Login: Demo 
+          <br></br>
+          Password: ASDFasdf12!@
+        </p>
         <div className="login-form-container">
           <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
             <div className="user_name-container">

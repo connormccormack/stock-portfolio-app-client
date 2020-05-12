@@ -10,11 +10,20 @@ export default class TopNav extends Component {
     this.props.history.push('/')
   }
 
+  handleTitleClick = () => {
+    const { user_id } = TokenService.readJwtToken();
+    if (TokenService.hasAuthToken()) {
+      this.props.history.push(`/portfolios/${user_id}`)
+    } else {
+      this.props.history.push('/')
+    }
+  }
+
   render() {
     console.log(this.props)
     return (
     <nav>
-      <h3 className="navTitle">Asset Trend</h3>
+      <h3 className="navTitle" onClick={() => this.handleTitleClick()}>Asset Trend</h3>
       <div>
       {TokenService.hasAuthToken() ? 
         <button type="button" className="logout-button" onClick={this.handleLogout}>

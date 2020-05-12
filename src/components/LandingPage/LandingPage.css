@@ -19,3 +19,13 @@ p {
   margin-bottom: 30px;
   margin-top: 30px;
 }
+
+.asset-suggestions {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.link-to-registration {
+  margin-bottom: 50 px;
+}

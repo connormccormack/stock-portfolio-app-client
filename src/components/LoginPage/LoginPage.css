@@ -1,11 +1,11 @@
 .login-form-container {
-  margin-top: 50px;
+  margin-top: 0px;
   text-align: right;
 }
 
 .login-screen {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
